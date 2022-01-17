@@ -1,0 +1,24 @@
+{
+	"workbench.statusBar.visible": true, // set to "true" if you want the status bar to visible,
+	"workbench.colorCustomizations": {
+		"statusBar.foreground": "#ffffff",
+		"statusBar.background": "#05501e"
+	},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "comment",
+				"settings": {
+					"fontStyle": "italic bold"
+				}
+			},
+			{
+				"scope": "string",
+				"settings": {
+					"fontStyle": "italic",
+					"foreground": "#a6eba6"
+				}
+			}
+		]
+	}
+}
