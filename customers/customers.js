@@ -16,6 +16,11 @@ const Customer = mongoose.model(`Customer`);
 // Connect to Database
 mongoose.connect(`mongodb+srv://khalid:.@cluster0.bu8in.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, () => {
     console.log(`Database Connected Successfully.`)
+
+    const PORT = 5555;
+    app.listen(PORT, () => {
+        console.log(`Server is running on ${PORT}!`)
+    });
 });
 
 // Root End point
@@ -81,8 +86,3 @@ app.delete('/customer/:id', (req, res) => {
 
 })
 
-
-const PORT = 5555;
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}!`)
-});

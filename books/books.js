@@ -16,6 +16,11 @@ const Book = mongoose.model(`Book`);
 // Connect to Database
 mongoose.connect("mongodb+srv://khalid:.@cluster0.bu8in.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", () => {
     console.log(`Database Connected Successfully.`)
+
+    const PORT = 4545;
+    app.listen(PORT, () => {
+        console.log(`Books Server is running on ${PORT}!`)
+    })
 })
 
 // End points
@@ -81,8 +86,3 @@ app.delete('/book/:id', (req, res) => {
 
 })
 
-
-const PORT = 4545;
-app.listen(PORT, () => {
-    console.log(`Books Server is running on ${PORT}!`)
-})

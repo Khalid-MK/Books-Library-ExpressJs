@@ -10,6 +10,12 @@ app.use(bodyParser.json());
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://khalid:.@cluster0.bu8in.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', () => {
     console.log("Database Connected Successfully");
+
+    // Run Server.
+    const PORT = 5656;
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
 })
 
 // Configure Endpoint
@@ -48,8 +54,3 @@ app.post('/order', (req, res) => {
         })
 })
 
-// Run Server.
-const PORT = 5656;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
